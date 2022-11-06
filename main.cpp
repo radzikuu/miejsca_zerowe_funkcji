@@ -11,6 +11,7 @@ void licz_funkcje(){
 	
 	cout << "1) FUNKCJA LINIOWA ax + b" << endl;
     cout << "2) FUNKCJA KWADRATOWA  ax^2 + bx + c" << endl;
+    cout << "3) FUNKCJA KWADRATOWA  a(x-p)^2 + q" << endl;
     
     cout << "\nWybieram: ";
     cin >> wybor;
@@ -40,7 +41,7 @@ void licz_funkcje(){
 		}
     	
 	}else if(wybor == 2){
-		cout << "\nObliczam: FUNKCJE KWADRATOWA" << endl;
+		cout << "\nObliczam: FUNKCJA KWADRATOWA - postac ogolna" << endl;
     	
     	cout << "\na = ";
     	cin >> a;
@@ -91,6 +92,11 @@ void licz_funkcje(){
 				cout << "\nFunkcja jest malejaca";
 			}	
 		}
+	}
+	
+	else if(wybor == 3){
+		cout << "\nObliczam: FUNKCJA KWADRATOWA - postac kanoniczna" << endl;
+
 	}
 }
 

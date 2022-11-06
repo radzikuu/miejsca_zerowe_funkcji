@@ -42,7 +42,27 @@ void f_liniowa(){
 			cout << "Funkcja nie ma miejsc zerowych.";
 			
 		}
-	
+	} else if(a == 0){
+		
+		cout << "\nFUNKCJA MA POSTAC LINIOWA: \n\n";
+		x1 = -c / b;
+		
+		if(b > 0){
+			
+			cout << "Miejsce zerowe: " << x1;
+			cout << "\nFunkcja jest rosnaca";
+		
+		} else if(b == 0){
+			
+			cout << "Nie ma miejsca zerowego";
+			cout << "\nFunkcja jest stala";
+		
+		} else if(b < 0){
+			
+			cout << "Miejsce zerowe: " << x1;
+			cout << "\nFunkcja jest malejaca";
+		
+		}	
 	}
 
     

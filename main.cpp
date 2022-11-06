@@ -63,7 +63,7 @@ void licz_funkcje(){
 				x1 = (-b - sqrt_d) / (2*a);
 				x2 = (-b + sqrt_d) / (2*a);
 				
-				cout << "x1 = " << x1;
+				cout << "x1 = " << x1; 
 				cout << "\nx2 = " << x2;
 			
 			} else if(delta == 0){

@@ -2,7 +2,7 @@
 #include <math.h>
 using namespace std;
 
-double a, b, c, delta, x1, x2;
+double a, b, c, delta, x1, x2, p, q;
 int wybor;
 
 
@@ -96,7 +96,41 @@ void licz_funkcje(){
 	
 	else if(wybor == 3){
 		cout << "\nObliczam: FUNKCJA KWADRATOWA - postac kanoniczna" << endl;
-
+		
+		cout << "";
+		do{
+			try{
+				cout << "\na = ";
+    			cin >> a;
+    
+    			cout << "p = ";
+    			cin >> p;
+    	
+    			cout << "q = ";
+    			cin >> q;
+				
+				if((-q/a) <= 0){
+					string napis = "\n-q/a musi byc wieksze od 0!\n\n";
+					throw(napis);
+				}	
+			}
+			
+			catch(string blad){
+				cout << blad;
+			}
+			
+		}while((-q/a) <= 0);
+		
+		if(a > 0 || a < 0){	
+			x1 = p + sqrt(-q/a);
+			x2 = p - sqrt(-q/a);
+			
+			cout << "\nx1  = " << x1;
+			cout << "\nx2 = " << x2;
+		
+		}else if(a == 0){
+			cout << "\nFUNKCJA MA POSTAC LINIOWA";
+		}	
 	}
 }
 

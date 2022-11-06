@@ -1,27 +1,28 @@
 #include <iostream>
-#include "funkcja_liniowa.h"
 using namespace std;
 
 double a, b, x;
 
 void f_liniowa(){
     cout << "Podaj wspolczynnik a i b funkcji liniowej: ";
-    cout << "\na nie moze byc 0\n";
 
-    while(a == 0){
-        cout << "a = ";
+		cout << "\na = ";
         cin >> a;
 
         cout << "b = ";
         cin >> b;
 
-        cout << endl;
-    }
+    if(a == 0){
+   		cout << "\nFunkcja nie ma miejsc zerowych (stala)";
+    }else{
+    	cout << endl;
+		x = -b/a;
 
-    x = -b/a;
+ 	    cout << "Miejsce zerowe x = " << x;
+	
+	}
 
-    cout << "Miejsce zerowe x = " << x;
-
+    
 }
 
 

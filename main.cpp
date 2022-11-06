@@ -3,10 +3,24 @@
 using namespace std;
 
 double a, b, c, delta, x1, x2;
+int wybor;
 
 void f_liniowa(){
-    cout << "FUNKCJA KWADRATOWA  ax^2 + bx + c = 0";
+	cout << "Ktora funkcje chcesz obliczyc?" << endl;
+	
+	cout << "1) FUNKCJA LINIOWA ax + b" << endl;
+    cout << "2) FUNKCJA KWADRATOWA  ax^2 + bx + c" << endl;
     
+    cout << "\nWybieram: ";
+    cin >> wybor;
+    
+    if(wybor == 1){
+    	cout << "\n=FUNKCJA LINIOWA=" << endl;
+	}else if(wybor == 2){
+		cout << "\n=FUNKCJA KWADRATOWA=" << endl;
+	}
+    
+	/*
 	cout << "\na = ";
     cin >> a;
     
@@ -15,7 +29,7 @@ void f_liniowa(){
       
 	cout << "c = ";
     cin >> c;
-        
+    */    
 
     if(a > 0 || a < 0){
 		int pow_b = pow(b,2);

@@ -1,25 +1,39 @@
 #include <iostream>
 using namespace std;
 
-double a, b, x;
+double a, b, c, x;
 
 void f_liniowa(){
-    cout << "Podaj wspolczynnik a i b funkcji liniowej: ";
+    cout << "Podaj wspolczynniki a, b, c funkcji liniowej: ";
 
 		cout << "\na = ";
         cin >> a;
 
         cout << "b = ";
         cin >> b;
+        
+        cout << "c = ";
+        cin >> c;
+        
 
-    if(a == 0){
-   		cout << "\nFunkcja nie ma miejsc zerowych (stala)";
-    }else{
-    	cout << endl;
-		x = -b/a;
-
- 	    cout << "Miejsce zerowe x = " << x;
-	
+    if(a==0){
+		if(b==0){
+			if(c==0){
+				cout << "Rownanie ma nieskonczenie wiele rozwiazan";
+			} else {
+				cout << "Rownanie jest sprzeczne";
+			}
+		} else {
+			if(c==0){
+				cout << "Rownanie ma nieskonczenie wiele rozwiazan";	
+			} else {
+				cout << "Rownanie nie ma miejsc zerowych";
+			}
+		}
+	} else {
+		int x;
+		x = -c/a;
+		cout << "Rownanie ma jedno miejsce zerowe: " << x;
 	}
 
     

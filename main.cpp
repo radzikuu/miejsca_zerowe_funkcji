@@ -29,15 +29,15 @@ void licz_funkcje(){
 
 		if(a > 0){
 			cout << "Miejsce zerowe: " << x1;
-			cout << "\nFunkcja jest rosnaca";
+			cout << "\nFunkcja jest rosnaca\n";
 
 		} else if(a == 0){
 			cout << "Nie ma miejsca zerowego";
-			cout << "\nFunkcja jest stala";
+			cout << "\nFunkcja jest stala\n";
 
 		} else if(a < 0){
 			cout << "Miejsce zerowe: " << x1;
-			cout << "\nFunkcja jest malejaca";
+			cout << "\nFunkcja jest malejaca\n";
 		}
 
 	}else if(wybor == 2){

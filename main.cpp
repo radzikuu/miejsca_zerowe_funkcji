@@ -39,8 +39,9 @@ void licz_funkcje(){
 			cout << "Miejsce zerowe: " << x1;
 			cout << "\nFunkcja jest malejaca\n";
 		}
+    }
 
-	}else if(wybor == 2){
+    else if(wybor == 2){
 		cout << "\nObliczam: FUNKCJA KWADRATOWA - postac ogolna" << endl;
 
     	cout << "\na = ";

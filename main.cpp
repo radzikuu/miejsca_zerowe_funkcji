@@ -178,8 +178,7 @@ void konwertuj(){
 	    cout << "\np = " << p;
 	    cout << "\nq = " << q << endl << endl;
 	
-	    //////////////  iloczynowa  //////////////
-	
+		
 	    double sqrt_d = sqrt(delta);
 	
 	    cout << "Postac iloczynowa: ";
@@ -201,10 +200,59 @@ void konwertuj(){
 	
 	else if(wybor == 2){
 		cout << "\nKonwertuje z POSTACI KANONICZNEJ" << endl;
+		
+		do{
+	        try{
+				cout << "\na = ";
+	            cin >> a;
+	
+	            cout << "p = ";
+	            cin >> p;
+	
+	            cout << "q = ";
+	            cin >> q;
+	            
+	            if(a == 0){
+	                string napis = "\na nie moze byc rowne 0!\n\n";
+	                throw(napis);
+	            }
+	        }
+
+	        catch(string blad){
+	            cout << blad;
+	        }
+    	}while(a == 0);
+
+	    delta = pow(b,2) - 4 * a * c;
+	
+	    b = -2*a*p;
+	    c = a*pow(p,2)+q;
+	
+	    cout << "\nPostac ogolna: ";
+	    cout << "\na = " << a;
+	    cout << "\nb = " << b;
+	    cout << "\nc = " << c << endl << endl;
+	
+		
+	    double sqrt_d = sqrt(delta);
+		
+	    cout << "Postac iloczynowa: ";
+	    if(-q/a <= 0){
+	    	cout << "nie istnieje";
+	    	
+		}else{
+			x1 = p + sqrt(-q/a);
+			x2 = p - sqrt(-q/a);
+			
+			cout << "\nx1  = " << x1;
+			cout << "\nx2 = " << x2;
+		}
+	    
 	}
 	
 	else if(wybor == 3){
 		cout << "\nKonwertuje z POSTACI ILOCZYNOWEJ" << endl;
+	
 	}
 }
 

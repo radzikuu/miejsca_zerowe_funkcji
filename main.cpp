@@ -168,17 +168,16 @@ void konwertuj(){
 	            cout << blad;
 	        }
     	}while(a == 0);
-
-	    delta = pow(b,2) - 4 * a * c;
 	
 	    p = -b/(2*a);
 	    q = -delta/(4*a);
 	
 	    cout << "\nPostac kanoniczna: ";
-	    cout << "\np = " << p;
+	    cout << "\na = " << a;
+		cout << "\np = " << p;
 	    cout << "\nq = " << q << endl << endl;
 	
-		
+	    delta = pow(b,2) - 4 * a * c;		
 	    double sqrt_d = sqrt(delta);
 	
 	    cout << "Postac iloczynowa: ";
@@ -222,20 +221,15 @@ void konwertuj(){
 	            cout << blad;
 	        }
     	}while(a == 0);
-
-	    delta = pow(b,2) - 4 * a * c;
 	
 	    b = -2*a*p;
-	    c = a*pow(p,2)+q;
+	    c = a * pow(p,2) + q;
 	
 	    cout << "\nPostac ogolna: ";
 	    cout << "\na = " << a;
 	    cout << "\nb = " << b;
 	    cout << "\nc = " << c << endl << endl;
-	
-		
-	    double sqrt_d = sqrt(delta);
-		
+			
 	    cout << "Postac iloczynowa: ";
 	    if(-q/a <= 0){
 	    	cout << "nie istnieje";
@@ -252,7 +246,44 @@ void konwertuj(){
 	
 	else if(wybor == 3){
 		cout << "\nKonwertuje z POSTACI ILOCZYNOWEJ" << endl;
+		
+		do{
+	        try{
+				cout << "\na = ";
+	            cin >> a;
 	
+	            cout << "x1 = ";
+	            cin >> x1;
+	
+	            cout << "x2 = ";
+	            cin >> x2;
+	            
+	            if(a == 0){
+	                string napis = "\na nie moze byc rowne 0!\n\n";
+	                throw(napis);
+	            }
+	        }
+
+	        catch(string blad){
+	            cout << blad;
+	        }
+    	}while(a == 0);
+    	
+    	b = -a*(x1 + x2);
+	    c = a*(x1 * x2);
+	
+	    cout << "\nPostac ogolna: ";
+	    cout << "\na = " << a;
+	    cout << "\nb = " << b;
+	    cout << "\nc = " << c << endl << endl;
+	    
+	    p = (x1 + x2) / 2;
+	    q = a*(p - x1)*(p - x2);
+	
+	    cout << "\nPostac kanoniczna: ";
+	    cout << "\na = " << a;
+		cout << "\np = " << p;
+	    cout << "\nq = " << q << endl << endl;
 	}
 }
 
@@ -276,7 +307,6 @@ int main(){
 	else if(w == 2){
     	konwertuj();	
 	}
-	
 	
     return 0;
 }

@@ -13,7 +13,7 @@ void licz_funkcje(){
     cout << "2) FUNKCJA KWADRATOWA  ax^2 + bx + c" << endl;
     cout << "3) FUNKCJA KWADRATOWA  a(x-p)^2 + q" << endl;
     
-    cout << "\nWybieram: ";
+    cout << "\nWybieram: "; 
     cin >> wybor;
     
     if(wybor == 1){
